@@ -15,6 +15,7 @@ ENV DEPS="\
 
 COPY requirements.txt /tmp/requirements.txt
 COPY entry_point.sh /opt/bin/entry_point.sh
+RUN chmod +x /opt/bin/entry_point.sh
 
 RUN apk update ;\
     apk add --no-cache ${DEPS} ;\
